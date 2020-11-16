@@ -1,0 +1,31 @@
+@mixin calendar {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+@mixin day {
+  width: $size;
+  height: $size;
+  background-color: #eeee;
+  position: relative;
+  border: 1px solid black;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+@mixin body-default {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@mixin hover {
+  background-color: pink;
+  transform: translate(0, -20px);
+  transition: transform 0.5s;
+}

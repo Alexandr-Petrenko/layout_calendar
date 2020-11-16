@@ -1,0 +1,20 @@
+@for $i from 28 through 31 {
+  .calendar-#{$i} div:nth-child(#{$i + 1}) {
+    display: none;
+  }
+}
+
+@each $day, $mul in (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6) {
+  .calendar-#{$day} div:first-child {
+    margin-left: ($size + 1) * $mul;
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::before {
+    content: "#{$i}";
+    position: absolute;
+    top: 35%;
+    left: 45%;
+  }
+}
