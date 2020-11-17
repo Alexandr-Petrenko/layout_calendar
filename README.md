@@ -10,7 +10,7 @@ ___
 ## Task
 Display a calendar in the middle of the screen. The HTML of the calendar needs to have the following structure:
 ```html
-<div class="calendar calendar-30 calendar-tue">
+<div class="calendar calendar-28 calendar-tue">
   <div></div>
   <div></div>
   <!--

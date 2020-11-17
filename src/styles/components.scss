@@ -1,10 +1,3 @@
 .calendar {
   @include calendar;
 }
-
-.calendar div {
-  @include day;
-  &:hover {
-    @include hover;
-  }
-}

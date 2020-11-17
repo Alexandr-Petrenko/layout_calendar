@@ -1,21 +1,23 @@
 @for $i from 28 through 31 {
-  .calendar-#{$i} div:nth-child(#{$i + 1}) {
-    display: none;
+  @for $j from 1 through $i {
+    .calendar-#{$i} div:nth-child(#{$j}) {
+      @include day;
+      &::before {
+        content: "#{$j}";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover {
+        @include hover;
+      }
+    }
   }
 }
 
 @each $day, $mul in (mon: 0, tue: 1, wed: 2, thu: 3, fri: 4, sat: 5, sun: 6) {
   .calendar-#{$day} div:first-child {
     margin-left: ($size + 1) * $mul;
-  }
-}
-
-@for $i from 1 through 31 {
-  .calendar div:nth-child(#{$i})::before {
-    content: "#{$i}";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
