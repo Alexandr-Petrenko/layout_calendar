@@ -4,8 +4,6 @@
       @include day;
       &::before {
         content: "#{$j}";
-        display: flex;
-        justify-self: center;
       }
       &:hover {
         @include hover;
